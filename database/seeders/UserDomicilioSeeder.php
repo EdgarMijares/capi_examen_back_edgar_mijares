@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\UserDomicilio;
 
 class UserDomicilioSeeder extends Seeder
 {
@@ -14,5 +15,6 @@ class UserDomicilioSeeder extends Seeder
     public function run()
     {
         //
+        UserDomicilio::factory(100)->create();
     }
 }
