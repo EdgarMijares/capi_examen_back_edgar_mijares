@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserDomicilio extends Model
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -22,4 +22,7 @@ class UserDomicilio extends Model
         'ciudad'
     ];
 
+    protected $hidden = [
+        'user_id',
+    ];
 }
